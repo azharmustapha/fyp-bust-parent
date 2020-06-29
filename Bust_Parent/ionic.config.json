@@ -1,0 +1,7 @@
+{
+  "name": "Bus-T_Parent",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

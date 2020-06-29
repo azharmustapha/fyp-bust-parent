@@ -1,0 +1,60 @@
+<!--
+  Generated template for the StudentregistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Student Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Student ID (Identification Card)</ion-label>
+            <ion-input type="text" [(ngModel)]="pelajar_id"></ion-input>
+          </ion-item>
+
+        <ion-item>
+          <ion-label floating>Student Name</ion-label>
+          <ion-input type="text" [(ngModel)]="pelajar_nama"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>School</ion-label>
+          <ion-select [(ngModel)]="sekolah_nama">
+            <ion-option>SK Kota</ion-option>
+            <ion-option>SK Seri Kota</ion-option>
+            <ion-option>SK Sultan Mahmud</ion-option>
+            <ion-option>SK Ahmad Maher</ion-option>
+            <ion-option>SK Padang Enggang</ion-option>
+            <ion-option>SK Kota Bharu</ion-option>
+            <ion-option>SK Kubang Kerian</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Parent Name</ion-label>
+          <ion-input type="text" [(ngModel)]="full_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Parent Phone Number</ion-label>
+          <ion-input type="text" [(ngModel)]="penjaga_phone"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+      <div>
+        <button ion-button color="default" block (click)="addStudentregist()">Register</button>
+      </div>
+
+  <!-- fab button -->
+  <ion-fab bottom right>
+    <button ion-fab (click)="first()"><ion-icon name="home"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

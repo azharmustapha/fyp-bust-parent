@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>Student List</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item *ngFor="let user of users;">
+        <h2>{{ user.pelajar_nama }}</h2>
+        <p>{{ user.sekolah_nama }} • {{ user.full_name }}</p>
+        <button ion-button clear item-end (click)="studentdetail(user.pelajar_id)">View</button>
+      </ion-item>
+    </ion-list>
+
+
+  <!-- fab button -->
+  <ion-fab bottom right>
+    <button ion-fab (click)="first()"><ion-icon name="home"></ion-icon></button>
+  </ion-fab>
+  
+</ion-content>

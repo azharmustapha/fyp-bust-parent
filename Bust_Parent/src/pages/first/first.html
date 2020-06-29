@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Welcome</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div text-center>
+    <img class="displayed"  height="120 px" width="350 px" src="assets/imgs/kids.png"/>
+  </div>
+
+  <p>Choose your page :</p>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="studentregist()">
+        <ion-icon name="md-person-add" item-start></ion-icon>
+        Register Student
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="homepage()">
+        <ion-icon name="md-school" item-start></ion-icon>
+        Student List
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="absence()">
+        <ion-icon name="md-person" item-start></ion-icon>
+        Student Absence
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="trackstudent()">
+        <ion-icon name="md-walk" item-start></ion-icon>
+        Track Student Attendance
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="trackbus()">
+        <ion-icon name="md-subway" item-start></ion-icon>
+        Track Bus
+      </button>
+    </ion-list>
+  </ion-card>
+
+  <ion-card >
+    <ion-list >
+      <button ion-item (click)="logout()">
+        <ion-icon name="log-out" item-start></ion-icon>
+        Logout
+      </button>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,65 @@
+<!--
+  Generated template for the TrackstudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Track Student</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content>
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+    <ion-item>
+        <ion-label class="my-size">Date</ion-label>
+        <ion-datetime display-format="MM/YYYY" picker-format="MMMM YYYY"></ion-datetime>
+      </ion-item>
+  
+      &nbsp;
+  
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 7px;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <table class="my-size" style="width:92%">
+        <tr>
+          <th>No.</th>
+          <th>Student ID</th> 
+          <th>Time Scan</th>
+        </tr>
+        <tr *ngFor="let user of users;">
+          <td>{{ user.jadual_id }}</td>
+          <td>{{ user.scannedCode }}</td>
+          <td>{{ user.scan_time }}</td>
+        </tr>
+      </table>
+      
+      </body>
+      </html>
+
+  <!-- fab button -->
+  <ion-fab bottom right>
+    <button ion-fab (click)="first()"><ion-icon name="home"></ion-icon></button>
+  </ion-fab>
+  
+</ion-content>
